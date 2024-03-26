@@ -72,6 +72,7 @@ bool Sample::CreateBGM()
 
 bool Sample::Init()
 {
+    CWriter::GetInstance().m_bValid = false;
     srand(time(NULL));
     CFSMManager::GetInstance().Init();
     CreateBGM();
@@ -225,6 +226,29 @@ bool Sample::Init()
         desc.UIScale = CVector3(30, 30, 1);
         DisableElixer->CreateUI(desc);
 
+        ClearUI = std::make_shared<CSpriteUVObj>();
+        CSpriteData data;
+        data.m_vPos = { 0 ,100.0f,0 };
+        data.m_vScale = { 571,399,1 };
+        data.FileName = L"../../Resourse/Clear.png";
+        data.ShaderName = L"../../Resourse/Plane.hlsl";
+        data.iCol = 5;
+        data.iRow = 4;
+        data.m_fDelay = 0.1f;
+        ClearUI->Load(CoreInterface::g_pDevice, CoreInterface::g_pImmediateContext, data);
+
+        FailUI = std::make_shared<CSpriteUVObj>();
+        data;
+        data.m_vPos = { 0 ,0.0f,0 };
+        data.m_vScale = { 479,289,1 };
+        data.FileName = L"../../Resourse/Lose.png";
+        data.ShaderName = L"../../Resourse/Plane.hlsl";
+        data.iCol = 5;
+        data.iRow = 4;
+        data.m_fDelay = 0.1f;
+        FailUI->Load(CoreInterface::g_pDevice, CoreInterface::g_pImmediateContext, data);
+
+
 
         float xInterval = 60;
         for (int i = 0; i < 5; ++i)
@@ -272,6 +296,8 @@ bool Sample::Init()
 }
 bool Sample::Frame()
 {
+    FailUI->Frame();
+    ClearUI->Frame();
     DisableSkillUI->Frame();
     DisableElixer->Frame();
     for (auto& UI : m_pUIList)
@@ -289,28 +315,7 @@ bool Sample::Frame()
     CWriter::GetInstance().AddText(msg, 900, 700, D2D1::ColorF(0.3215, 0.751, 0.1235, 1));
    
    
-    if (IsClear)
-    {
-        std::wstring msg = L"[ClearTime : ";
-        msg += std::to_wstring(minute);
-        msg += L"Ка ";
-        msg += std::to_wstring(ClearTime);
-        msg += L"УЪ] ";
-        CWriter::GetInstance().AddText(msg, 600, 300, D2D1::ColorF(0.3215, 0.751, 0.1235, 1));
-       
-    }
-    else
-    {
 
-        if (ClearTime >= 60.0)
-        {
-            ClearTime -= 60;
-            
-            minute+=1;
-        }
-      
-      
-    }
    
     CoreInterface::g_pMainCamera->m_vCameraPos = m_pPlayer->m_vPos;
    // CoreInterface::g_pMainCamera->m_vCameraPos.y -= 300.0f;
@@ -319,7 +324,9 @@ bool Sample::Frame()
         &&m_pLobbyScene.get()->CheckCollide(m_pLobbyScene.get()->m_pPotal->m_RT,m_pPlayer.get()->m_RT))
     {
         ClearTime = 0;
-        IsClear = false;
+        IsClear = None;
+        ClearPlay = false;
+        UITime = 0.0f;
         m_PresentScene->m_pBoss->HealthPoint = m_PresentScene->m_pBoss->MaxBossHP;
         m_PresentScene = m_p1PhaseScene.get();
         m_BGM->SoundStop();
@@ -352,16 +359,17 @@ bool Sample::Frame()
          m_PresentScene = m_pLobbyScene.get();
          if (m_pPlayer->DeathCount>0)
          {
-             IsClear = true;
+             IsClear = Clear;
              m_pPlayer->HealthPoint = 60000;
              m_pPlayer->DeathCount = 5;
 
          }
          else
          {
-             IsClear = false;
+             IsClear = Fail;
              m_pPlayer->HealthPoint = 60000;
              m_pPlayer->DeathCount = 5;
+             m_pPlayer->IsDead = false;
          }
          SpriteUI.clear();
          float xInterval = 60;
@@ -734,6 +742,22 @@ bool Sample::Render()
   
     }
 
+    if (IsClear==Clear && !ClearPlay)
+    {
+        ClearUI->SetMatrix(nullptr, nullptr, &CoreInterface::g_pMainCamera->m_OrthProjectionMatrix);
+        ClearUI->Render(0);
+        UITime += g_fSecondPerFrame;
+        if (UITime >= 1.6)
+            ClearPlay = true;
+    }
+    if (IsClear == Fail && !ClearPlay)
+    {
+        FailUI->SetMatrix(nullptr, nullptr, &CoreInterface::g_pMainCamera->m_OrthProjectionMatrix);
+        FailUI->Render(0);
+        UITime += g_fSecondPerFrame;
+        if(UITime>=1.6)
+           ClearPlay = true;
+    }
     return true;
 
 }

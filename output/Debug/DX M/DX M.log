@@ -1,18 +1,17 @@
 ﻿  Sample.cpp
-C:\Users\kgca42_09\Desktop\Dx2D Maple\CCoreLib\Header\CSpriteObj.h(57,52): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\CCoreLib\Header\CSpriteObj.h(79,47): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(75,15): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(285,79): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(285,72): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(285,64): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(289,79): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(289,72): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(289,64): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(299,83): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(299,76): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(299,68): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(449,40): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(493,44): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(506,44): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\kgca42_09\Desktop\Dx2D Maple\Project\DX M\Sample.cpp(750,1): warning C4244: '인수': 'float'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  DX M.vcxproj -> C:\Users\kgca42_09\Desktop\Dx2D Maple\output\Debug\DX M.exe
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\CCoreLib\Header\CSpriteObj.h(57,52): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\CCoreLib\Header\CSpriteObj.h(79,47): warning C4267: 'return': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\Project\DX M\Sample.cpp(76,15): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\Project\DX M\Sample.cpp(311,79): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\Project\DX M\Sample.cpp(311,72): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\Project\DX M\Sample.cpp(311,64): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\Project\DX M\Sample.cpp(315,79): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\Project\DX M\Sample.cpp(315,72): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\Project\DX M\Sample.cpp(315,64): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\Project\DX M\Sample.cpp(457,40): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\Project\DX M\Sample.cpp(501,44): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\Project\DX M\Sample.cpp(514,44): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\Project\DX M\Sample.cpp(749,19): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\Project\DX M\Sample.cpp(757,19): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\Project\DX M\Sample.cpp(774,1): warning C4244: '인수': 'float'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  DX M.vcxproj -> C:\Users\kgca42_09\Desktop\학원자료\Dx2D Maple Project\output\Debug\DX M.exe

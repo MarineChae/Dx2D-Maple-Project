@@ -15,6 +15,14 @@
 #include"C5thSkill.h"
 #include"CUI.h"
 #include"DamageIndicator.h"
+
+enum ClearEnum
+{
+	None,
+	Clear,
+	Fail
+};
+
 class Sample : public CCore
 {
 
@@ -54,9 +62,16 @@ public:
 
 	std::vector<std::shared_ptr<CSpriteUVObj>> SpriteUI;
 
+
+	std::shared_ptr<CSpriteUVObj> ClearUI;
+	std::shared_ptr<CSpriteUVObj> FailUI;
+
+
 	double PotionCoolDown = 5;
 	
-	bool IsClear = false;
+	bool ClearPlay = false;
+	ClearEnum IsClear = None;
+	float UITime = 0.0f;
 	bool isRight;
 	int m_iTexIndex = 0;
 
