@@ -1,0 +1,40 @@
+﻿  CSoundMgr.cpp
+E:\CHB Projects\CHB Projects\CCoreLib\CSoundMgr.cpp(10,35): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+E:\CHB Projects\CHB Projects\CCoreLib\CSoundMgr.cpp(25,39): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+E:\CHB Projects\CHB Projects\CCoreLib\CSoundMgr.cpp(35,31): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+  CCoreLib.vcxproj -> E:\CHB Projects\output\Debug\CCoreLib.lib
+  CCamera.h
+  CCollision.h
+  CCore.h
+  CDefine.h
+  CDevice.h
+  CDxObject.h
+  CInput.h
+  CMapObj.h
+  CNpcObj.h
+  CObject.h
+  CoreInterface.h
+  CParticle.h
+  CPlaneObj.h
+  CPlayerObj.h
+  CShaderMgr.h
+  CSoundMgr.h
+  CSpriteObj.h
+  CTextureMgr.h
+  CTimer.h
+  CUtiliy.h
+  CWindow.h
+  CWriter.h
+  DirectXTex.h
+  fmod.h
+  fmod_codec.h
+  fmod_common.h
+  fmod_dsp.h
+  fmod_dsp_effects.h
+  fmod_errors.h
+  fmod_output.h
+  Mymath.h
+         31개 파일이 복사되었습니다.
+  DirectXTex.inl
+          1개 파일이 복사되었습니다.
+          1개 파일이 복사되었습니다.
